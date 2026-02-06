@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>晨辉物流 - 广西专线</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .route-line {
+            position: relative;
+        }
+        .route-line::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -30px;
+            width: 20px;
+            height: 2px;
+            background: #cbd5e1;
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-8 px-4 shadow-lg">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-3">晨辉物流</h1>
+            <p class="text-xl md:text-2xl opacity-90">广西专线</p>
+            <div class="mt-4 inline-block bg-white/20 backdrop-blur-sm rounded-full px-6 py-2">
+                <span class="text-sm font-medium">专业 · 高效 · 安全</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- Route Cards -->
+        <section class="mb-12">
+            <div class="flex items-center justify-center mb-6">
+                <div class="h-0.5 w-12 bg-blue-600"></div>
+                <h2 class="text-2xl font-bold text-gray-800 mx-4">直达专线</h2>
+                <div class="h-0.5 w-12 bg-blue-600"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Zhanjiang -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-500">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">湛江</h3>
+                            <p class="text-xs text-gray-500">Zhanjiang</p>
+                        </div>
+                    </div>
+                    <div class="text-xs text-blue-600 font-medium bg-blue-50 rounded-full px-3 py-1 inline-block">
+                        直达
+                    </div>
+                </div>
+
+                <!-- Maoming -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-6 border-l-4 border-green-500">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">茂名</h3>
+                            <p class="text-xs text-gray-500">Maoming</p>
+                        </div>
+                    </div>
+                    <div class="text-xs text-green-600 font-medium bg-green-50 rounded-full px-3 py-1 inline-block">
+                        直达
+                    </div>
+                </div>
+
+                <!-- Yulin -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-6 border-l-4 border-purple-500">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">玉林</h3>
+                            <p class="text-xs text-gray-500">Yulin</p>
+                        </div>
+                    </div>
+                    <div class="text-xs text-purple-600 font-medium bg-purple-50 rounded-full px-3 py-1 inline-block">
+                        直达
+                    </div>
+                </div>
+
+                <!-- Guilin -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-6 border-l-4 border-orange-500">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">桂林</h3>
+                            <p class="text-xs text-gray-500">Guilin</p>
+                        </div>
+                    </div>
+                    <div class="text-xs text-orange-600 font-medium bg-orange-50 rounded-full px-3 py-1 inline-block">
+                        直达
+                    </div>
+                </div>
+
+                <!-- Liuzhou -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-6 border-l-4 border-teal-500">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">柳州</h3>
+                            <p class="text-xs text-gray-500">Liuzhou</p>
+                        </div>
+                    </div>
+                    <div class="text-xs text-teal-600 font-medium bg-teal-50 rounded-full px-3 py-1 inline-block">
+                        直达
+                    </div>
+                </div>
+
+                <!-- Nanning -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-6 border-l-4 border-red-500">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">南宁</h3>
+                            <p class="text-xs text-gray-500">Nanning</p>
+                        </div>
+                    </div>
+                    <div class="text-xs text-red-600 font-medium bg-red-50 rounded-full px-3 py-1 inline-block">
+                        直达
+                    </div>
+                </div>
+
+                <!-- Wenshan -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-6 border-l-4 border-indigo-500">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">云南文山</h3>
+                            <p class="text-xs text-gray-500">Wenshan</p>
+                        </div>
+                    </div>
+                    <div class="text-xs text-indigo-600 font-medium bg-indigo-50 rounded-full px-3 py-1 inline-block">
+                        直达
+                    </div>
+                </div>
+
+                <!-- Nanning to Xingyi -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-6 border-l-4 border-pink-500">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center mr-3">
+                            <svg class="w-5 h-5 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 text-sm">南宁至贵州兴义</h3>
+                            <p class="text-xs text-gray-500">Nanning to Xingyi</p>
+                        </div>
+                    </div>
+                    <div class="text-xs text-pink-600 font-medium bg-pink-50 rounded-full px-3 py-1 inline-block">
+                        跨省专线
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Area Cards -->
+        <section class="mb-12">
+            <div class="flex items-center justify-center mb-6">
+                <div class="h-0.5 w-12 bg-blue-600"></div>
+                <h2 class="text-2xl font-bold text-gray-800 mx-4">服务区域</h2>
+                <div class="h-0.5 w-12 bg-blue-600"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Zhanjiang Area -->
+                <div class="card-hover bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-lg p-6 border border-blue-200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">郑州直达湛江区域</h3>
+                            <p class="text-sm text-blue-600 font-medium">辐射湛江周边区域</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">茂名</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">化州</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">高州</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">封开</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">信宜</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">廉江</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">遂溪</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">吴川</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">电白</span>
+                    </div>
+                </div>
+
+                <!-- Wenshan Area -->
+                <div class="card-hover bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl shadow-lg p-6 border border-indigo-200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">郑州直达云南文山区域</h3>
+                            <p class="text-sm text-indigo-600 font-medium">辐射云南东南部分区域</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">广南</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">八宝</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">砚山</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">富宁</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">西畴</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 shadow-sm">麻栗坡</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="mb-12">
+            <div class="flex items-center justify-center mb-6">
+                <div class="h-0.5 w-12 bg-blue-600"></div>
+                <h2 class="text-2xl font-bold text-gray-800 mx-4">服务热线</h2>
+                <div class="h-0.5 w-12 bg-blue-600"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Guangxi Hotline -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg p-6 text-center border-2 border-blue-500 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-600"></div>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">广西全境区域往返</h3>
+                    <div class="space-y-2">
+                        <a href="tel:13838013838" class="block bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                            138-3801-3838
+                        </a>
+                        <a href="tel:15003815666" class="block bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                            150-0381-5666
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Zhanjiang Hotline -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg p-6 text-center border-2 border-green-500 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-green-600"></div>
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">湛江区域</h3>
+                    <div class="space-y-2">
+                        <a href="tel:13526666638" class="block bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors">
+                            135-2666-6638
+                        </a>
+                        <a href="tel:13949019319" class="block bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors">
+                            139-4901-9319
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Wenshan Hotline -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg p-6 text-center border-2 border-indigo-500 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-indigo-600"></div>
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">文山区域</h3>
+                    <div class="space-y-2">
+                        <a href="tel:19838066665" class="block bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors">
+                            198-3806-6665
+                        </a>
+                        <a href="tel:18239999958" class="block bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors">
+                            182-3999-9958
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="mt-8 gradient-bg rounded-2xl p-8 text-center text-white shadow-xl">
+                <h3 class="text-2xl font-bold mb-3">欢迎新老客户致电</h3>
+                <p class="text-white/90">我们将竭诚为您提供最优质的物流服务</p>
+            </div>
+        </section>
+
+        <!-- Address Section -->
+        <section class="mb-8">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+                <div class="flex items-start">
+                    <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">总公司地址</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            新郑市郭店镇黄金大道远通物流园第一排左转50米<br>
+                            <span class="text-sm text-gray-500">6/7/8/9/10/11仓储</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-400 text-sm">© 2024 晨辉物流. 保留所有权利.</p>
+            <p class="text-gray-500 text-xs mt-2">专业物流服务 · 值得信赖</p>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button (Mobile) -->
+    <div class="fixed bottom-6 right-6 md:hidden">
+        <a href="tel:13838013838" class="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center shadow-lg pulse-animation">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+        </a>
+    </div>
+</body>
+</html>
